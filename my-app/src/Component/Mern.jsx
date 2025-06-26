@@ -1,73 +1,68 @@
-import React from 'react'
+import React from 'react';
 
 const Mern = () => {
+  const roadmap = [
+    {
+      title: 'HTML',
+      items: ['Introduction', 'HTML Elements', 'Forms & Tables', 'Media and Embedding', 'Project'],
+    },
+    {
+      title: 'CSS',
+      items: ['Introduction', 'Box Model', 'Layout Techniques', 'Styling', 'Project'],
+    },
+    {
+      title: 'JAVASCRIPT',
+      items: ['Basics', 'Functions', 'DOM Manipulation', 'Advanced Topics', 'Project'],
+    },
+    {
+      title: 'NODE AND NODE JS',
+      items: [
+        'JavaScript Runtime Environment',
+        'Server-Side Development Tool',
+        'Event-Driven Architecture',
+        'Non-Blocking I/O',
+        'Project',
+      ],
+    },
+    {
+      title: 'MANGO AND EXPRESS',
+      items: [
+        'Fast Web Server',
+        'Scalable Backend API',
+        'Database Integration Ease',
+        'Asynchronous Data Handling',
+      ],
+    },
+    {
+      title: 'REACT',
+      items: ['Components', 'State Management', 'Props', 'Hooks', 'Redux', 'Project'],
+    },
+  ];
+
   return (
-    <div>
-   <h3 className='mb-2 text-xl font-bold text-blue-800 mt-8 mb-8'>React MERN Stack Roadmap</h3>
+    <div className="px-4 py-8">
+      <h3 className="text-xl font-bold text-blue-800 mb-8 mt-8">React MERN Stack Roadmap</h3>
 
-   <div className="bg-white flex space-x-6 p-4 overflow-x-auto justify-center">
+      <div className="flex flex-col md:flex-row md:flex-wrap gap-6 justify-center">
+        {roadmap.map(({ title, items }) => (
+          <div
+            key={title}
+            className="bg-blue-900 text-white rounded-lg shadow-lg p-6 w-full sm:w-64"
+          >
+            <h2 className="text-lg font-bold mb-4">{title}</h2>
+            {items.map((item, idx) => (
+              <div key={idx}>
+                <p className="text-white/90 mb-2">{item}</p>
+                {idx !== items.length - 1 && <hr className="border-white/30" />}
+              </div>
+            ))}
+          </div>
+        ))}
+      </div>
 
-   <div className="w-64 bg-blue-900 text-white shadow-lg rounded-lg p-6">
-    <h2 className="text-1.2xl font-bold mb-2">HTML</h2>
-    <p className="text-white-600">Introduction</p><hr />
-    <p className="text-white-600">HTML Elements</p><hr />
-    <p className="text-white-600">Forms & Tables</p><hr />
-    <p className="text-white-600">Media and Embedding</p><hr />
-    <p className="text-white-600">Project</p><hr />
-  </div>
-
-  <div className="w-64 bg-blue-900 text-white shadow-lg rounded-lg p-6">
-    <h2 className="text-1.2xl font-bold mb-2">CSS</h2>
-    <p className="text-white-600">Introduction</p><hr />
-    <p className="text-white-600">Box Model</p><hr />
-    <p className="text-white-600">Layout Techniques</p><hr />
-    <p className="text-white-600">Styling</p><hr />
-    <p className="text-white-600">Project</p><hr />
-  </div>
-
-  <div className="w-64 bg-blue-900 text-white shadow-lg rounded-lg p-6">
-    <h2 className="text-1.2xl font-bold mb-2">JAVASCRIPT</h2>
-    <p className="text-white-600">Basics</p><hr />
-    <p className="text-white-600">Functions</p><hr />
-    <p className="text-white-600">DOM Manipulation</p><hr />
-    <p className="text-white-600">Advanced Topics</p><hr />
-    <p className="text-white-600">Project</p><hr />
-  </div>
-  </div>
-
-  <div className=" bg-white flex space-x-6 p-4 overflow-x-auto justify-center">
-  <div className="w-64 bg-blue-900 text-white shadow-lg rounded-lg p-6">
-    <h2 className="text-1.2xl font-bold mb-2">NODE AND NODE JS</h2>
-    <p className="text-white-600">JavaScript Runtime Environment</p><hr />
-    <p className="text-white-600">Server-Side Development Tool</p><hr />
-    <p className="text-white-600">Event-Driven Architecture</p><hr />
-    <p className="text-white-600">Non-Blocking I/O</p><hr />
-    <p className="text-white-600">Project</p><hr />
-  </div>
-
-  <div className="w-64 bg-blue-900 text-white shadow-lg rounded-lg p-6">
-    <h2 className="text-1.2xl font-bold mb-2">MANGO AND EXPRESS</h2>
-    <p className="text-white-600">Fast Web Server</p><hr />
-    <p className="text-white-600">Scalable Backend API</p><hr />
-    <p className="text-white-600">Database Integration Ease</p><hr />
-    <p className="text-white-600">Asynchronous Data Handling</p><hr />
-  </div>
-
-  <div className="w-64 bg-blue-900 text-white shadow-lg rounded-lg p-6">
-    <h2 className="text-1.2xl font-bold mb-2">REACT</h2>
-    <p className="text-white-600">Components</p><hr />
-    <p className="text-white-600">State Management</p><hr />
-    <p className="text-white-600">Props</p><hr />
-    <p className="text-white-600">Hooks</p><hr />
-    <p className="text-white-600">Redux</p><hr />
-    <p className="text-white-600">Project</p><hr />
-  </div>
-
-
-</div>
-<hr className='m-10' />
+      <hr className="my-10" />
     </div>
-  )
-}
+  );
+};
 
-export default Mern
+export default Mern;

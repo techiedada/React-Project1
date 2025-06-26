@@ -3,9 +3,9 @@ import myimage from '../Assets/myimage.jpeg'
 
 const About = () => {
   return (
-    <div>
+    <div >
       <h3 className='m-8 font-bold text-xl font-roboto'>About MERN Infotech</h3>
-      <p className='font-roboto'>MERN Infotech is one of the top IT Training Institutes in Pune, specializing in all leading Software Technologies Providing best quality training solutions to
+      <p className='font-roboto md: p-4'>MERN Infotech is one of the top IT Training Institutes in Pune, specializing in all leading Software Technologies Providing best quality training solutions to
        Fresher and <br />
        Experienced students. We are developing our students as a independent and dedicated employees through our Training. We have placed more
        than individuals in Top <br />
@@ -19,7 +19,7 @@ const About = () => {
       <img
               src={myimage}
               alt="Home Banner"
-              className="w- [200px] h-[300px] object-cover rounded-lg shadow-lg mx-auto mt-14"
+              className="w- [200px] h-[300px] object-cover rounded-lg shadow-lg mx-auto mt-14 max-w-md"
             />
             <h3 className='text-blue-800 font-bold mt-4'>Mr. Dattatray Mahangare</h3>
             <h4 className='text-blue-800 font-bold mb-12'>Co-Founder & CEO</h4>

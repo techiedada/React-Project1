@@ -1,83 +1,95 @@
-import React from 'react'
+import React from 'react';
 
 const Dotnet = () => {
   return (
-    <div>
-    <h3 className='mb-2 text-xl font-bold text-blue-800 mt-8 mb-8'> Full Stack .NET Roadmap</h3>
+    <div className="px-4">
+      <h3 className="text-xl font-bold text-blue-800 mt-8 mb-8 text-center">
+        Full Stack .NET Roadmap
+      </h3>
 
-    <div className=" bg-white flex space-x-6 p-4 overflow-x-auto justify-center">
- 
-    <div className="w-64 bg-white-100 text-gray shadow-lg rounded-lg p-6">
-     <h2 className="text-1.2xl font-bold mb-2">C#.NET</h2>
-     <p className="text-white-600">Core C#</p><hr />
-     <p className="text-white-600">ASP.NET</p><hr />
-     <p className="text-white-600">Entity Framework</p><hr />
-     <p className="text-white-600">Tools & Testing</p><hr />
-   </div>
- 
-   <div className="w-64 bg-white-100 text-gray shadow-lg rounded-lg p-6">
-     <h2 className="text-1.2xl font-bold mb-2">.NET CORE WEB API</h2>
-     <p className="text-white-600">Basics of .NET Core</p><hr />
-     <p className="text-white-600">Web API Development</p><hr />
-     <p className="text-white-600">Data Access</p><hr />
-     <p className="text-white-600">Advanced Topics</p><hr />
-   </div>
- 
-   <div className="w-64 bg-white-100 text-gray shadow-lg rounded-lg p-6">
-     <h2 className="text-1.2xl font-bold mb-2">SOLID PRICIPLES</h2>
-     <p className="text-white-600">SRP</p><hr />
-     <p className="text-white-600">OCP</p><hr />
-     <p className="text-white-600">LSP</p><hr />
-     <p className="text-white-600">ISP & DIP</p><hr />
+      {/* Row 1 */}
+      <div className="flex flex-wrap justify-center gap-6 mb-8">
+        {/* Card 1 */}
+        <div className="min-w-[16rem] md:w-64 bg-white shadow-lg rounded-lg p-6">
+          <h2 className="text-xl font-bold mb-2">C#.NET</h2>
+          <p>Core C#</p><hr />
+          <p>ASP.NET</p><hr />
+          <p>Entity Framework</p><hr />
+          <p>Tools & Testing</p><hr />
+        </div>
+
+        {/* Card 2 */}
+        <div className="min-w-[16rem] md:w-64 bg-white shadow-lg rounded-lg p-6">
+          <h2 className="text-xl font-bold mb-2">.NET CORE WEB API</h2>
+          <p>Basics of .NET Core</p><hr />
+          <p>Web API Development</p><hr />
+          <p>Data Access</p><hr />
+          <p>Advanced Topics</p><hr />
+        </div>
+
+        {/* Card 3 */}
+        <div className="min-w-[16rem] md:w-64 bg-white shadow-lg rounded-lg p-6">
+          <h2 className="text-xl font-bold mb-2">SOLID PRINCIPLES</h2>
+          <p>SRP</p><hr />
+          <p>OCP</p><hr />
+          <p>LSP</p><hr />
+          <p>ISP & DIP</p><hr />
+        </div>
+
+        {/* Card 4 */}
+        <div className="min-w-[16rem] md:w-64 bg-white shadow-lg rounded-lg p-6">
+          <h2 className="text-xl font-bold mb-2">DESIGN PATTERNS</h2>
+          <p>Singleton</p><hr />
+          <p>Factory</p><hr />
+          <p>Strategy</p><hr />
+          <p>Dependency Injection</p><hr />
+        </div>
+      </div>
+
+      {/* Row 2 */}
+      <div className="flex flex-wrap justify-center gap-6 mb-8">
+        {/* Angular */}
+        <div className="min-w-[16rem] md:w-64 bg-white shadow-lg rounded-lg p-6">
+          <h2 className="text-xl font-bold mb-2">ANGULAR</h2>
+          <p>Typescript</p><hr />
+          <p>Data Binding</p><hr />
+          <p>Routing</p><hr />
+          <p>Advanced Topics</p><hr />
+        </div>
+
+        {/* React */}
+        <div className="min-w-[16rem] md:w-64 bg-white shadow-lg rounded-lg p-6">
+          <h2 className="text-xl font-bold mb-2">REACT</h2>
+          <p>Components</p><hr />
+          <p>State Management</p><hr />
+          <p>Props</p><hr />
+          <p>Hooks</p><hr />
+          <p>Redux</p><hr />
+          <p>Project</p><hr />
+        </div>
+
+        {/* Mini Projects */}
+        <div className="min-w-[16rem] md:w-64 bg-white shadow-lg rounded-lg p-6">
+          <h2 className="text-xl font-bold mb-2">2 MINI PROJECTS</h2>
+          <p>Project Planning & Setup</p><hr />
+          <p>Development</p><hr />
+          <p>Testing</p><hr />
+          <p>Deployment</p><hr />
+        </div>
+
+        {/* SQL */}
+        <div className="min-w-[16rem] md:w-64 bg-white shadow-lg rounded-lg p-6">
+          <h2 className="text-xl font-bold mb-2">SQL</h2>
+          <p>Basic SQL</p><hr />
+          <p>Database Design</p><hr />
+          <p>Optimization & Management</p><hr />
+          <p>Join</p><hr />
+        </div>
+      </div>
+
+      <hr className="m-10" />
     </div>
- 
-     <div className="w-64 bg-white-100 text-gray shadow-lg rounded-lg p-6">
-     <h2 className="text-1.2xl font-bold mb-2">DESIGN PATTERN</h2>
-     <p className="text-white-600">Singleton</p><hr />
-     <p className="text-white-600">Factory</p><hr />
-     <p className="text-white-600">Strategy</p><hr />
-     <p className="text-white-600">Dependency Injection</p><hr />
-    </div> 
-    </div>
+  );
+};
 
-    <div className=" bg-white flex space-x-6 p-4 overflow-x-auto justify-center">
-    <div className="w-64 bg-white-100 text-gray shadow-lg rounded-lg p-6">
-     <h2 className="text-1.2xl font-bold mb-2">ANGULAR</h2>
-     <p className="text-white-600">Typescript</p><hr />
-     <p className="text-white-600">Data Binding</p><hr />
-     <p className="text-white-600">Routing</p><hr />
-     <p className="text-white-600">Advanced Topics</p><hr />
-   </div>
-   
-   <div className="w-64 bg-white-100 text-gray shadow-lg rounded-lg p-6">
-   <h2 className="text-1.2xl font-bold mb-2">REACT</h2>
-   <p className="text-white-600">Components</p><hr />
-   <p className="text-white-600">State Management</p><hr />
-   <p className="text-white-600">Props</p><hr />
-   <p className="text-white-600">Hooks</p><hr />
-   <p className="text-white-600">Redux</p><hr />
-   <p className="text-white-600">Project</p><hr />
- </div>
-
- <div className="w-64 bg-white-100 text-gray shadow-lg rounded-lg p-6">
-   <h2 className="text-1.2xl font-bold mb-2">2 MINI PROJECTS</h2>
-   <p className="text-white-600">Project Planning & Setup</p><hr />
-   <p className="text-white-600">Development</p><hr />
-   <p className="text-white-600">Testing</p><hr />
-   <p className="text-white-600">Deployment</p><hr />
- </div>
- <div className="w-64 bg-white-100 text-gray shadow-lg rounded-lg p-6">
-   <h2 className="text-1.2xl font-bold mb-2">SQL</h2>
-   <p className="text-white-600">Basic SQL</p><hr />
-   <p className="text-white-600">Database Design</p><hr />
-   <p className="text-white-600">Optimization & Management</p><hr />
-   <p className="text-white-600">Join</p><hr />
- </div>
- </div>
-
- <hr className='m-10' />
-     </div>
-  )
-}
-
-export default Dotnet
+export default Dotnet;

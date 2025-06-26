@@ -1,87 +1,70 @@
-import React from 'react'
-import lab from '../Assets/lab.jpg'
-import personimg from '../Assets/personimg.jpg'
+import React from 'react';
+import lab from '../Assets/lab.jpg';
+import personimg from '../Assets/personimg.jpg';
 
 const Home = () => {
   return (
-    <div className="p-4">
-      <h4 className='mb-1 text-1.8xl'><b>MERN Infotech</b></h4>
+    <div className="px-4 py-8">
+      <h4 className="text-2xl font-bold mb-4">MERN Infotech</h4>
+
+      {/* Main Banner Image */}
       <img
         src={lab}
         alt="Home page"
-        className="w-full h-[600px] object-cover rounded-lg shadow-lg"
+        className="w-full h-auto max-h-[600px] object-cover rounded-lg shadow-lg mb-6"
       />
-      <p className='m-14 font-family-roboto text-1.9xl '> <b>MERN Infotech </b> is one of the top IT Training Institutes in Pune, specializing in all leading Software Technologies Providing best quality training solutions to <br />  
-       Fresher and Experienced students. We are developing our students as a independent and dedicated employees through our Training. We have placed more <br />
-       than individuals in Top MNC’s through our training programs and so we are well-known as one of the best Placement Training Institutes in Pune. <br />
 
+      {/* Intro Paragraph */}
+      <p className="text-base md:text-lg leading-relaxed text-gray-800 mb-8">
+        <strong>MERN Infotech</strong> is one of the top IT Training Institutes in Pune, specializing in leading Software Technologies. We provide best-in-class training to both freshers and experienced professionals. Our mission is to develop students into independent and dedicated developers through hands-on, project-based training.
+        <br /><br />
+        We’ve placed hundreds of students in top MNCs, earning a reputation as one of Pune’s best placement training institutes. With modern courses, real-time projects, and mock interviews, our curriculum is designed to bridge the industry skill gap.
+      </p>
 
-       We offer professional career courses to eligible candidates and mold them into knowledgeable industry-expected skills in our IT Training <br /> 
-       and Pune and Bangalore. We cover the most popular IT courses with the most up-to-date curriculum. <br /> <br />
-       Because of the insufficient proficiency of the candidates, there will always be a skill gap in the industry for on-demand technologies. <br />
-       We place a greater emphasis on hands-on experience to ensure that our students outperform from the start. We conduct numerous mock interviews <br />
-        and assessments in order to compete in interviews to the best of our abilities.</p>
-      <hr />
+      <hr className="my-6" />
 
-      <h3 className='font-roboto text-purple-800 font-bold text-xl p-4'>Benefits of Online Courses & Training</h3>
-        <p className='p-4 font-serif'>Get Hands-On Knowledge with Real Time Projects from this Online Training Courses. We are rated as "Best Online Training Course Provider" from India with Placement guidance. <br /> 
-           Enroll for Free Courses & Get Sample Self-Paced Videos on Trending Technologies</p>
+      {/* Online Course Benefits */}
+      <h3 className="text-xl font-bold text-purple-800 mb-2">Benefits of Online Courses & Training</h3>
+      <p className="text-gray-700 mb-6">
+        Get hands-on knowledge with real-time projects through our online training programs. Rated as a top course provider from India with placement assistance. Enroll for free courses and access sample self-paced videos on trending technologies.
+      </p>
 
-        <div className=" bg-white flex space-x-8  p-6 overflow-x-auto justify-center">
+      {/* Course Cards - 3 rows */}
+      {[
+        ['HTML', 'https://www.w3schools.com/html/'],
+        ['CSS', 'https://www.w3schools.com/Css/'],
+        ['JAVASCRIPT', 'https://www.w3schools.com/js/default.asp'],
+        ['REACT', 'https://www.w3schools.com/react/default.asp'],
+        ['NODE JS', 'https://www.w3schools.com/nodejs/'],
+        ['MONGO DB', 'https://www.w3schools.com/mongodb/'],
+        ['JAVA', 'https://www.w3schools.com/java/'],
+        ['MYSQL', 'https://www.w3schools.com/mysql/default.asp'],
+        ['HADOOP', 'https://hadoop.apache.org/']
+      ].reduce((rows, item, i) => {
+        if (i % 3 === 0) rows.push([]);
+        rows[rows.length - 1].push(item);
+        return rows;
+      }, []).map((row, index) => (
+        <div key={index} className="flex flex-col sm:flex-row gap-6 justify-center mb-8">
+          {row.map(([title, link]) => (
+            <div key={title} className="bg-blue-800 text-white p-6 rounded-lg shadow-lg w-full sm:w-64">
+              <h2 className="text-lg font-bold mb-2">{title}</h2>
+              <a href={link} target="_blank" rel="noopener noreferrer">
+                <u>More Details</u>
+              </a>
+            </div>
+          ))}
+        </div>
+      ))}
 
-        <div className="w-60 h-70 bg-blue-800 shadow-lg rounded-lg p-8 ">
-        <h2 className="text-1.2xl font-bold mb-2 text-white">HTML</h2>
-        <a href="https://www.w3schools.com/html/" target="_blank"><u className='text-white'>More Details</u> </a>
-        </div>
-        <div className="w-64 bg-blue-800 shadow-lg rounded-lg p-8 ">
-        <h2 className="text-1.2xl font-bold mb-2 text-white">CSS</h2>
-        <a href="https://www.w3schools.com/Css/" target="_blank"><u className='text-white'>More Details</u> </a>
-        </div>
-        <div className="w-64 bg-blue-800 shadow-lg rounded-lg p-8 ">
-        <h2 className="text-1.2xl font-bold mb-2 text-white">JAVASCRIPT</h2>
-        <a href="https://www.w3schools.com/js/default.asp" target="_blank"><u className='text-white'>More Details</u> </a>
-        </div>
-        </div>
-
-          <div className=" bg-white flex space-x-8  p-6 overflow-x-auto justify-center">
-
-        <div className="w-60 h-70 bg-blue-800 shadow-lg rounded-lg p-8 ">
-        <h2 className="text-1.2xl font-bold mb-2 text-white">REACT</h2>
-        <a href="https://www.w3schools.com/react/default.asp" target="_blank"><u className='text-white'>More Details</u> </a>
-        </div>
-        <div className="w-64 bg-blue-800 shadow-lg rounded-lg p-8 ">
-        <h2 className="text-1.2xl font-bold mb-2 text-white">NODE JS</h2>
-        <a href="https://www.w3schools.com/nodejs/" target="_blank"><u className='text-white'>More Details</u> </a>
-        </div>
-        <div className="w-64 bg-blue-800 shadow-lg rounded-lg p-8 ">
-        <h2 className="text-1.2xl font-bold mb-2 text-white">MONGO DB</h2>
-        <a href="https://www.w3schools.com/mongodb/" target="_blank"><u className='text-white'>More Details</u> </a>
-        </div>
-        </div>
-
-        <div className=" bg-white flex space-x-8  p-6 overflow-x-auto justify-center">
-
-        <div className="w-60 h-70 bg-blue-800 shadow-lg rounded-lg p-8 ">
-        <h2 className="text-1.2xl font-bold mb-2 text-white">JAVA</h2>
-        <a href="https://www.w3schools.com/java/" target="_blank"><u className='text-white'>More Details</u> </a>
-        </div>
-        <div className="w-64 bg-blue-800 shadow-lg rounded-lg p-8 ">
-        <h2 className="text-1.2xl font-bold mb-2 text-white">MYSQL</h2>
-        <a href="https://www.w3schools.com/mysql/default.asp" target="_blank"><u className='text-white'>More Details</u> </a>
-        </div>
-        <div className="w-64 bg-blue-800 shadow-lg rounded-lg p-8 ">
-        <h2 className="text-1.2xl font-bold mb-2 text-white">HADOOP</h2>
-        <a href="https://hadoop.apache.org/" target="_blank"><u className='text-white'>More Details</u> </a>
-        </div>
-        </div>
-        
-        <img
+      {/* Person Image at Bottom */}
+      <img
         src={personimg}
-        alt="Home page"
-        className="w-full h-[600px] object-cover rounded-lg shadow-lg m-8"
+        alt="Learning Image"
+        className="w-full h-auto max-h-[600px] object-cover rounded-lg shadow-lg"
       />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
